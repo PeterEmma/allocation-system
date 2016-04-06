@@ -1,19 +1,21 @@
 {
-  "name": "allocation-system-model",
+  "name": "allocation-system",
   "version": "1.0.0",
-  "description": "development model of this system",
+  "description": "A new project",
   "main": "server.js",
   "dependencies": {
     "css-loader": "^0.23.1",
-    "file-loader": "^0.8.5",
     "jsx-loader": "^0.13.2",
+    "file-loader": "^0.8.5",
+    "jquery": "^2.2.3",
     "rctui": "^0.5.2",
-    "react": "^0.14.7",
-    "react-dom": "^0.14.7",
+    "react": "^0.14.8",
+    "react-dom": "^0.14.8",
     "react-hot-loader": "^1.3.0",
+    "react-router": "^2.0.1",
     "style-loader": "^0.13.1",
-    "webpack": "^1.12.14",
     "url-loader": "^0.5.7",
+    "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1"
   },
   "devDependencies": {},
@@ -26,9 +28,9 @@
     "url": "git+https://github.com/skykobe/allocation-system.git"
   },
   "keywords": [
-    "system"
+    "allocation-system"
   ],
-  "author": "Ricardo",
+  "author": "Ricard",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/skykobe/allocation-system/issues"
