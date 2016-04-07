@@ -1,7 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Test = require('./test')
 ReactDOM.render(
-	<Test />,
+	<h1>LOGIN</h1>,
 	document.getElementById('root')
 )
