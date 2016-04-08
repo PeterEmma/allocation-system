@@ -18,14 +18,36 @@ module.exports = {
 		filename: '[name].js',
 		publicPath: '/src/'  // 网站运行时的访问路径(开发调试用)，与html中对应
 	},
+	// resolve: {
+ //        extensions: ['', '.js', '.jsx']
+ //    },
 	plugins: [
     	new webpack.HotModuleReplacementPlugin()
   	],
   	module: {
-  		loaders: [
-  			{ test: /\.js$/, loaders: ['react-hot', 'jsx-loader'],include: path.join(__dirname, 'src')},
-  			{ test: /\.(png|jpg)$/, loader: 'url-loader'},
-  			{ test: /\.css$/, loaders: ['style-loader', 'css-loader']}
-  		]
+  		loaders: [{
+            test: /\.jsx?$/,
+            loader: 'babel',
+            query: {
+                //添加两个presents 使用这两种presets处理js或者jsx文件
+                presets: ['es2015', 'react']
+            }
+        }, { 
+  			 test: /\.(png|jpg)$/, 
+  			 loader: 'url-loader'
+  		}, { 
+  			 test: /\.css$/, 
+  			 loaders: ['style-loader', 'css-loader']
+  		}, {
+            test: /\.scss$/,
+            loaders: ['style', 'css', 'sass']
+        }, {
+            test: /\.less$/,
+            loaders: ['style', 'css', 'less']
+        }, {
+        	test: /\.js$/,
+        	loader: 'react-hot',
+        	include: path.join(__dirname, 'src')
+        }]
   	}
 }

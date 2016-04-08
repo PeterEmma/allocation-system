@@ -2,6 +2,6 @@
 var React = require('react');
 module.exports = React.createClass({
 	render: function() {
-		return <h1>admin</h1>
+		return <h1>Admin,ok111223</h1>
 	}
 })
